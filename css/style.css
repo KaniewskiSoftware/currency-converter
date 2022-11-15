@@ -1,0 +1,21 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    background-color: #53535341;
+    color: #212529;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 5px 20px;
+}

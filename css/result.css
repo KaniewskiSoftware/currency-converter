@@ -1,0 +1,15 @@
+/* RESULT */
+.result {
+    margin-top: 10px;
+    width: 100%;
+    background-color: rgba(85, 84, 84, 0.158);
+    text-align: center;
+    border: 2px solid #6C757C;
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+
+.result__text {
+    display: inline-block;
+    padding: 0 0 10px;
+}
