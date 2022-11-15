@@ -2,7 +2,7 @@
 
 ## Demo
 
-[Currency-Converter](https://st4rkmano.github.io/Currency-Converter/)
+[Currency-Converter](https://st4rkmano.github.io/currency-converter/)
 
 ## Description
 
