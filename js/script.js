@@ -1,9 +1,4 @@
 {
-  const init = () => {
-    const calculator = document.querySelector(".js-calculator");
-    calculator.addEventListener("input", handleRate);
-  };
-
   const handleResult = (rate, currency) => {
     const jsResult = document.querySelector(".js-result");
     const jsAmount = document.querySelector(".js-amount");
@@ -67,6 +62,11 @@
         break;
     }
     handleResult(rate, currency);
+  };
+
+  const init = () => {
+    const calculator = document.querySelector(".js-calculator");
+    calculator.addEventListener("input", handleRate);
   };
 
   init();
