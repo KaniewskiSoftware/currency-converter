@@ -1,72 +1,66 @@
 {
-  const handleResult = (rate, currency) => {
+  const updateResultText = (outcome, currency) => {
     const jsResult = document.querySelector(".js-result");
-    const jsAmount = document.querySelector(".js-amount");
-    jsResult.innerText = `${(jsAmount.value * rate).toFixed(2)} ${currency}`;
+    jsResult.innerText = `${outcome.toFixed(2)} ${currency}`;
   };
 
-  const handleRate = () => {
+  const getRate = () => {
     const jsStartCurrency = document.querySelector(".js-startCurrency");
     const jsEndCurrency = document.querySelector(".js-endCurrency");
-    const currency = jsEndCurrency.options[jsEndCurrency.selectedIndex].text;
-    let rate;
+    const currencyPair = `${jsStartCurrency.value}${jsEndCurrency.value}`;
 
-    if (
-      jsStartCurrency.options[jsStartCurrency.selectedIndex].text ===
-      jsEndCurrency.options[jsEndCurrency.selectedIndex].text
-    )
-      rate = 1;
-
-    switch (
-      jsStartCurrency.options[jsStartCurrency.selectedIndex].text +
-      jsEndCurrency.options[jsEndCurrency.selectedIndex].text
-    ) {
+    switch (currencyPair) {
       case "PLNEUR":
-        rate = 0.21307;
-        break;
+        return 0.21307;
+
       case "PLNUSD":
-        rate = 0.21301;
-        break;
+        return 0.21301;
+
       case "PLNCHF":
-        rate = 0.210728;
-        break;
+        return 0.210728;
+
       case "USDPLN":
-        rate = 4.6595;
-        break;
+        return 4.6595;
+
       case "USDEUR":
-        rate = 1.00011;
-        break;
+        return 1.00011;
+
       case "USDCHF":
-        rate = 0.989302;
-        break;
+        return 0.989302;
+
       case "CHFPLN":
-        rate = 4.74466;
-        break;
+        return 4.74466;
+
       case "CHFEUR":
-        rate = 1.01104;
-        break;
+        return 1.01104;
+
       case "CHFUSD":
-        rate = 1.01081;
-        break;
+        return 1.01081;
+
       case "EURPLN":
-        rate = 4.6678;
-        break;
+        return 4.6678;
+
       case "EURUSD":
-        rate = 0.999743;
-        break;
+        return 0.999743;
+
       case "EURCHF":
-        rate = 0.989049;
-        break;
+        return 0.989049;
 
       default:
-        break;
+        return 1;
     }
-    handleResult(rate, currency);
   };
 
+  const onFormChange = () => {
+    const jsEndCurrency = document.querySelector(".js-endCurrency");
+    const jsAmount = document.querySelector(".js-amount");
+    const rate = getRate();
+    updateResultText(rate * jsAmount.value, jsEndCurrency.value);
+  };
+  
   const init = () => {
     const calculator = document.querySelector(".js-calculator");
-    calculator.addEventListener("input", handleRate);
+    calculator.addEventListener("input", onFormChange);
   };
 
   init();
