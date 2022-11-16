@@ -2,7 +2,7 @@
   const handleResult = (rate, currency) => {
     const jsResult = document.querySelector(".js-result");
     const jsAmount = document.querySelector(".js-amount");
-    jsResult.innerText = jsAmount.value * rate.toFixed(2) + currency;
+    jsResult.innerText = `${(jsAmount.value * rate).toFixed(2)} ${currency}`;
   };
 
   const handleRate = () => {
