@@ -55,6 +55,7 @@
     const jsEndCurrency = document.querySelector(".js-endCurrency");
     const jsAmount = document.querySelector(".js-amount");
     const rate = getRate();
+    
     updateResultText(rate * jsAmount.value, jsEndCurrency.value);
   };
   
