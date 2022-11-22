@@ -34,13 +34,3 @@
     border-radius: 5px;
     letter-spacing: 1px;
 }
-
-.calculator__resultContainer {
-    margin-top: 10px;
-    width: 100%;
-    background-color: rgba(85, 84, 84, 0.158);
-    text-align: center;
-    border: 2px solid #212529;
-    border-radius: 10px;
-    letter-spacing: 1px;
-}
