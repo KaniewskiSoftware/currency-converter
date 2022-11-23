@@ -1,6 +1,6 @@
 # currency-converter
 
-## Review
+## Preview
 
 ![gif shows how the converter works](images/CurrencyConverterAnimation.gif)
 
