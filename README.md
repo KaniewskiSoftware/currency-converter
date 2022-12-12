@@ -6,7 +6,7 @@
 
 ## Demo
 
-[Currency-Converter](https://st4rkmano.github.io/currency-converter/)
+[Currency-Converter](https://kaniewskisoftware.github.io/currency-converter/)
 
 ## Description
 
