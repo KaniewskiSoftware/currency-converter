@@ -29,6 +29,7 @@
 
 .calculator__input {
     width: 100%;
+    padding: 10px;
     text-align: center;
     border: 1px solid #212529;
     border-radius: 5px;
