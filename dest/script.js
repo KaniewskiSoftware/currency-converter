@@ -2,14 +2,7 @@
 {
     const updateResultText = (outcome, currency) => {
         const jsResult = document.querySelector(".js-result");
-        if (jsResult) {
-            if (outcome) {
-                jsResult.innerText = `${outcome.toFixed(2)} ${currency}`;
-                return;
-            }
-            jsResult.innerText = "Wpisz poprawną wartość";
-        }
-        return;
+        jsResult.innerText = `${outcome.toFixed(2)} ${currency}`;
     };
     const getRate = () => {
         const jsStartCurrency = document.querySelector(".js-startCurrency");
@@ -48,9 +41,7 @@
         const jsEndCurrency = document.querySelector(".js-endCurrency");
         const jsAmount = document.querySelector(".js-amount");
         const rate = getRate();
-        const value = +jsAmount.value;
-        const outcome = rate * value;
-        updateResultText(outcome, jsEndCurrency.value);
+        updateResultText(rate * +jsAmount.value, jsEndCurrency.value);
     };
     const init = () => {
         const calculator = document.querySelector(".js-calculator");
